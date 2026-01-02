@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EjaaaTyz Payment</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #120000, #000);
+    box-shadow: 0 0 25px red;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #ff3b3b;
+}
+
+.copy-btn {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.copy-btn:active {
+    background: darkred;
+}
+
+.footer {
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1>EjaaaTyz Payment</h1>
+
+    <div class="card">
+        <h3>DANA</h3>
+        <p id="dana">087826509707</p>
+        <button class="copy-btn" onclick="copyText('dana')">Copy Dana</button>
+    </div>
+
+    <div class="card">
+        <h3>GOPAY</h3>
+        <p id="gopay">087826509707</p>
+        <button class="copy-btn" onclick="copyText('gopay')">Copy Gopay</button>
+    </div>
+
+    <div class="card">
+        <h3>QRIS</h3>
+        <p>Minta ke admin</p>
+    </div>
+
+    <div class="footer">
+        <p>1. kalo beli jasteb SS BUKTI TF + SUNG KIRIM EMAIL AJA</p>
+        <p>2. kalo join SS BUKTI TF DAN TUNGGU SEBENTAR SAJA</p>
+    </div>
+</div>
+
+<script>
+function copyText(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text);
+    alert("Berhasil disalin: " + text);
+}
+</script>
+</body>
+          </html>
