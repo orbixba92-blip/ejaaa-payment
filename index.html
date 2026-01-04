@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EJAATZY STORE | Auto Order</title>
+
+<style>
+:root{
+  --hitam:#000814;
+  --biru-tua:#001233;
+  --biru-card:#001845;
+  --biru-aksen:#003cff;
+  --teks:#e6edff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+  background:linear-gradient(180deg,var(--hitam),var(--biru-tua));
+  color:var(--teks);
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:28px 15px;
+  border-bottom:1px solid #002b6b;
+}
+header h1{
+  color:#4d7cff;
+  letter-spacing:1px;
+}
+header p{
+  opacity:.8;
+  margin-top:6px;
+}
+
+/* CONTENT */
+.container{
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+
+/* CARD */
+.card{
+  background:linear-gradient(180deg,var(--biru-card),#000d2b);
+  padding:18px;
+  border-radius:14px;
+  box-shadow:0 0 25px rgba(0,60,255,.2);
+  border:1px solid #001f4d;
+}
+.card h2{
+  color:#6f93ff;
+  font-size:18px;
+}
+.price{
+  margin:6px 0 12px;
+  color:#00ffd5;
+  font-weight:bold;
+}
+.card ul{
+  list-style:none;
+  font-size:14px;
+  line-height:1.6;
+}
+.card ul li::before{
+  content:"✔ ";
+  color:#4d7cff;
+}
+
+/* BUTTON */
+button{
+  margin-top:14px;
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,#002bff,#004cff);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:hover{
+  opacity:.85;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  opacity:.6;
+  border-top:1px solid #002b6b;
+}
+
+/* JS */
+</style>
+
+<script>
+function order(product){
+  const text =
+`Halo EJAATZY STORE 👋
+
+Saya mau order:
+
+📦 Barang : ${product}
+💸 Nominal :
+🕰️ Waktu : Sekarang
+💳 Payment :
+
+Mohon segera diproses ya.
+Terima kasih 🙏`;
+
+  const url = "https://wa.me/6287826509707?text=" + encodeURIComponent(text);
+  window.open(url, "_blank");
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>EJAATZY STORE</h1>
+  <p>Auto Order WhatsApp • Jualan Jasteb • Dll</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+  <h2>PT JASTEB BIASA</h2>
+  <div class="price">10K</div>
+  <ul>
+    <li>Email unlimited</li>
+    <li>2 Panel JASTEB</li>
+    <li>Res murni no auto</li>
+  </ul>
+  <button onclick="order('PT JASTEB BIASA - 10K')">ORDER VIA WA</button>
+</div>
+
+<div class="card">
+  <h2>PT JASTEB MINI</h2>
+  <div class="price">5K</div>
+  <ul>
+    <li>Email unlimited</li>
+    <li>PT tiap Jumat</li>
+    <li>Res murni</li>
+  </ul>
+  <button onclick="order('PT JASTEB MINI - 5K')">ORDER VIA WA</button>
+</div>
+
+<div class="card">
+  <h2>PT JASTEB VVIP</h2>
+  <div class="price">15K</div>
+  <ul>
+    <li>Panel Prib + GB</li>
+    <li>Bisa open PT</li>
+    <li>No PT ulang</li>
+  </ul>
+  <button onclick="order('PT JASTEB VVIP - 15K')">ORDER VIA WA</button>
+</div>
+
+<div class="card">
+  <h2>TEAM JASTEB</h2>
+  <div class="price">20K</div>
+  <ul>
+    <li>Create panel</li>
+    <li>Full tutor</li>
+    <li>Open jual panel</li>
+  </ul>
+  <button onclick="order('TEAM JASTEB - 20K')">ORDER VIA WA</button>
+</div>
+
+<div class="card">
+  <h2>PANEL JASTEB PRIBADI</h2>
+  <div class="price">10K</div>
+  <ul>
+    <li>Email unlimited</li>
+    <li>Nama ress bebas</li>
+    <li>Result murni</li>
+  </ul>
+  <button onclick="order('PANEL JASTEB PRIBADI - 10K')">ORDER VIA WA</button>
+</div>
+
+<div class="card">
+  <h2>MARGA BANTENESIA</h2>
+  <div class="price">40K</div>
+  <ul>
+    <li>Create panel</li>
+    <li>Full pengajaran</li>
+    <li>Jamin balmod</li>
+  </ul>
+  <button onclick="order('MARGA BANTENESIA - 40K')">ORDER VIA WA</button>
+</div>
+
+<div class="card">
+  <h2>TEAM RESULTS</h2>
+  <div class="price">30K</div>
+  <ul>
+    <li>Create panel</li>
+    <li>Open team ress</li>
+    <li>Full tutor</li>
+  </ul>
+  <button onclick="order('TEAM RESULTS - 30K')">ORDER VIA WA</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 EJAATZY STORE • REALL ✓
+</footer>
+
+</body>
+</html>
